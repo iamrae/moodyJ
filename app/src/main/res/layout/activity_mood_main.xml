@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MoodMainActivity"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
+    android:id="@+id/icons_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_marginTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="25dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="20dp"
+    >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:text="신나는"
+        android:textSize="14sp"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="#231f20"
+        android:gravity="left"
+        android:id="@+id/Funny_tv"/>
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/FunnyGloomy_bar"
+        android:thumb="@drawable/gradient"
+        android:foregroundGravity="center"
+        android:progress="50"
+        android:progressDrawable="@drawable/spinner"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="우울한"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        android:textSize="14sp"
+        android:textColor="#231f20"
+        android:id="@+id/Gloomy_tv"
+        android:gravity="right"
+
+        />
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="25dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp"
+    >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:text="부드러운"
+        android:textSize="14sp"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:gravity="left"
+        android:id="@+id/Soft_tv"/>
+    <SeekBar
+        android:layout_width="200dp"
+        android:thumb="@drawable/gradient"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/SoftRough_bar"
+        android:progressDrawable="@drawable/spinner"
+        android:progress="50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="거친"
+        android:layout_marginRight="35dp"
+        android:textSize="14sp"
+        android:textColor="#231f20"
+        android:id="@+id/Rough_tv"
+        android:gravity="right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="20dp"
+    >
+    <TextView
+        android:layout_height="25dp"
+        android:layout_width="80dp"
+        android:text="템포"
+        android:textSize="14sp"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="#231f20"
+        android:gravity="left"
+        android:id="@+id/Tempo_tv"/>
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/Tempo_bar"
+        android:thumb="@drawable/gradient"
+        android:progress="50"
+        android:progressDrawable="@drawable/spinner"
+        android:layout_height="25dp" />
+
+    <Button
+        android:id="@+id/buttonSort"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundbutton"
+        android:text="@string/fa_icon_mood"
+        android:textColor="#231f20"
+        android:textSize="30sp" />
+
+</RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        tools:listitem="@layout/layout_my_music_list"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

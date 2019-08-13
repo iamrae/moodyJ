@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtmp:1.4.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rtmp-1.4.6.aar/38a383bc09ad2581f3552ccf4f4b89df/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rtmp-1.4.6.aar/38a383bc09ad2581f3552ccf4f4b89df/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

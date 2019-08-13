@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VlcPlayerActivity"
+    android:background="@color/colorBlack">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/closeStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/fa_icon_close"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_margin="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/remains" />
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="280dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="45dp"
+        android:layout_below="@id/profile"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:text="Title of the song being played"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/view_artist"
+        android:layout_width="280dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/ThemePrimary"
+        android:text="albumArtist"
+        android:layout_below="@id/view_title"
+        android:textSize="18sp"
+        android:textAlignment="center" />
+
+    <RelativeLayout
+        android:id="@+id/playControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_artist"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp">
+
+
+        <TextView
+            android:id="@+id/playIng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fa_icon_play"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/playPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fa_icon_pause"
+            android:visibility="visible"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

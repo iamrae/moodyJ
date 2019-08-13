@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "fa_icon_play">&#xf04b;</string>
+    <string name= "fa_icon_play_circle">&#xf144;</string>
+    <string name = "fa_icon_pause">&#xf04c;</string>
+    <string name= "fa_icon_pause_circle">&#xf28b;</string>
+    <string name= "fa_icon_forward">&#xf04e;</string>
+    <string name= "fa_icon_backward">&#xf04a;</string>
+    <string name = "fa_icon_plus">&#xf067;</string>
+    <string name = "fa_icon_podcast">&#xf2ce;</string>
+    <string name = "fa_icon_stream">&#xf550;</string>
+    <string name = "fa_icon_star">&#xf005;</string>
+    <string name = "fa_icon_redo">&#xf01e;</string>
+    <string name = "fa_icon_random">&#xf074;</string>
+    <string name = "fa_icon_comment">&#xf075;</string>
+    <string name = "fa_icon_smile">&#xf118;</string>
+    <string name = "fa_icon_user">&#xf007;</string>
+    <string name = "fa_icon_user_friends">&#xf500;</string>
+    <string name = "fa_icon_volume_down">&#xf027;</string>
+    <string name = "fa_icon_volume_off">&#xf026;</string>
+    <string name = "fa_icon_volume_up">&#xf028;</string>
+    <string name = "fa_icon_wifi">&#xf1eb;</string>
+    <string name = "fa_icon_search">&#xf002;</string>
+    <string name = "fa_icon_share">&#xf064;</string>
+    <string name = "fa_icon_mood">&#xf21e;</string>
+    <string name = "fa_icon_music">&#xf001;</string>
+    <string name = "fa_icon_heart">&#xf21e;</string>
+    <string name = "fa_icon_close">&#xf00d;</string>
+
+
+    <item name="icons_container" type="id" />
+</resources>

@@ -1,0 +1,5 @@
+include ':app', ':encoder', ':rtplibrary', ':rtmp', ':rtsp'
+project(':rtplibrary').projectDir = new File('app/libs/rtplibrary')
+project(':encoder').projectDir = new File('app/libs/encoder')
+project(':rtmp').projectDir = new File('app/libs/rtmp')
+project(':rtsp').projectDir = new File('app/libs/rtsp')

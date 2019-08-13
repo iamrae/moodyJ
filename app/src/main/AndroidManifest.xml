@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.raelee.moodyj">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- some devices need it -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-feature android:name="android.hardware.camera2.autofocus" />
+
+    <application
+        android:name=".MoodyJ"
+        android:allowBackup="true"
+        android:icon="@drawable/moodyj_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".RecomMusicService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".RecomPlayerActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".PlayerActivity" />
+        <activity android:name=".MyMusicListActivity" />
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".StreamingMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="paymentdone" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PaymentActivity">
+
+            <!-- 웹뷰 및 ISP 등의 어플 인증후 앱으로 다시 호출하기 위한 스키마 설정 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="payment" />
+                <data android:scheme="moody" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MoodMainActivity" />
+        <activity android:name=".StreamerActivity" /> <!-- <activity android:name=".RtmpActivity"></activity> -->
+        <activity android:name=".StreamingPlayerActivity" />
+    </application>
+
+</manifest>

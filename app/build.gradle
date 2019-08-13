@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.raelee.moodyj"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+            jni.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    // Encapsulates your external native build configurations.
+    externalNativeBuild {
+
+        // Encapsulates your CMake build configurations.
+        ndkBuild {
+
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    compileOnly 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    //imageView widget (circular)
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    // okhttp (not used)
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    // exoPlayer + rtmp
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.3'
+    implementation 'com.google.android.exoplayer:extension-rtmp:2.7.3'
+    // rtmp + rtsp library
+    implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.4.6'
+    implementation project(':rtplibrary')
+    implementation project(':rtmp')
+    // vlc player
+    implementation 'com.github.pedroSG94.vlc-example-streamplayer:pedrovlc:2.5.14v3'
+    //implementation project(':pedrovlc')
+    //gson
+    implementation 'com.google.code.gson:gson:2.7'
+    //volley
+    implementation 'com.android.volley:volley:1.1.0'
+}

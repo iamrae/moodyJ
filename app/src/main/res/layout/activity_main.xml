@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/icons_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#231f20"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:textColor="@color/ThemePrimary"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/buttonMood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@color/ThemePrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/iconMood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fa_icon_mood"
+                android:textColor="#231f20"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginTop="56dp"/>
+
+            <TextView
+                android:id="@+id/textMood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="무드에 따라 듣기"
+                android:textColor="#231f20"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/buttonList"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/iconList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fa_icon_music"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="내 음악 듣기"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#55ffffff"
+            android:layout_marginTop="2dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/buttonStream"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:id="@+id/iconStream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fa_icon_stream"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textStream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="스트리밍"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
